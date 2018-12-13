@@ -6,10 +6,6 @@ export interface Persistence {
 }
 
 export const persistence: Persistence = {
-  save(state) {
-    localStorage.setItem("state", JSON.stringify(state));
-  },
-  load() {
-    return JSON.parse(localStorage.getItem("state") || "{}");
-  }
+  save: state => localStorage.setItem("state", JSON.stringify(state)),
+  load: () => JSON.parse(localStorage.getItem("state") || "{}")
 };

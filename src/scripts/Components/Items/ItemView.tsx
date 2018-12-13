@@ -1,4 +1,5 @@
 import { h, Component } from "hyperapp";
+import { RawHtml } from "../RawHtml";
 
 export interface QiitaItem {
   rendered_body: string;
@@ -18,8 +19,6 @@ interface State {
 
 export const ItemView: Component<State> = ({ item }) => {
   return (
-    <div
-      oncreate={(element: Element) => (element.innerHTML = item.rendered_body)}
-    />
+    <RawHtml html={item.rendered_body}/>
   );
 };

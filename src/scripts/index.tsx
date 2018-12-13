@@ -5,7 +5,7 @@ import { Actions, action } from "./Action";
 import { Header } from "./Components/Header";
 import { Route, location } from "@hyperapp/router";
 import { Home } from "./Components/Home";
-import { persistence, Persistence } from "./Components/Utils/Persistence";
+import { persistence, Persistence } from "./Utils/Persistence";
 
 const App: View<
   State & { location: typeof location.state },
