@@ -1,5 +1,5 @@
 import { h, Component } from "hyperapp";
 
 export const Title: Component = () => {
-  return <div>HyperQiita</div>
-}
+  return <div>HyperQiita</div>;
+};

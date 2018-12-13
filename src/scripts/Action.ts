@@ -7,5 +7,5 @@ export interface Actions {
 }
 
 export const action: ActionsType<State, Actions> = {
-  items,
-}
+  items
+};
