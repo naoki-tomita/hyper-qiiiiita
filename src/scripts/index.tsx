@@ -19,26 +19,31 @@ const App: View<
       <Route
         parent
         path="/items"
-        render={() => <Items {...state.items} {...actions.items} />}
+        render={() => (<Items {...state.items} {...actions.items} />)}
       />
     </div>
   );
 };
 
-const main = app(
-  {
-    ...state,
-    location: location.state
-  },
-  {
-    ...action,
-    ...persistence,
-    location: location.actions
-  },
-  App,
-  document.getElementById("app")
-);
+async function main() {
+  const application = app(
+    {
+      ...state,
+      location: location.state
+    },
+    {
+      ...action,
+      ...persistence,
+      location: location.actions
+    },
+    App,
+    document.getElementById("app")
+  );
 
-location.subscribe(main.location);
-main.load();
-main.items.fetchItems(state.items.page);
+  application.load();
+  await application.items.fetchItems(state.items.page);
+  location.subscribe(application.location);
+  location.actions.go(window.location.pathname);
+}
+
+main();
