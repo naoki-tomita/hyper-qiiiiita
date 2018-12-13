@@ -18,7 +18,5 @@ interface State {
 }
 
 export const ItemView: Component<State> = ({ item }) => {
-  return (
-    <RawHtml html={item.rendered_body}/>
-  );
+  return <RawHtml html={item.rendered_body} />;
 };

@@ -22,6 +22,6 @@
     "build:scripts": "webpack",
     "build:apps": "cp -r ./src/apps/. ./dist/.",
     "serve": "ws --spa ./dist/index.html",
-    "fix": "prettier ./src/scripts/**/*.ts{x,} --write"
+    "fix": "prettier --write \"./src/**/*.ts{x,}\""
   }
 }
