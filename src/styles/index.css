@@ -1,0 +1,29 @@
+.highlight {
+  color: white;
+  background-color: #272822;
+  font-style: Menlo, Consolas;
+}
+
+.c1, .c2 {
+  color: #75715e;
+}
+
+.kd, .nc {
+  color: #66d9ef;
+}
+
+.nx {
+  color: #fd971f;
+}
+
+.s1, .s2 {
+  color: #e6db74;
+}
+
+.na {
+  color: #ae81ff;
+}
+
+.k {
+  color: #f92672;
+}

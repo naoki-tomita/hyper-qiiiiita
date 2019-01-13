@@ -21,6 +21,7 @@
     "build": "run-p build:*",
     "build:scripts": "webpack",
     "build:apps": "cp -r ./src/apps/. ./dist/.",
+    "build:css": "cp -r ./src/styles/. ./dist/.",
     "serve": "ws --spa ./dist/index.html",
     "fix": "prettier --write \"./src/**/*.ts{x,}\""
   }
